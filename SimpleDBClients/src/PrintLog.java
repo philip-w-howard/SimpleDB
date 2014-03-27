@@ -12,7 +12,7 @@ public class PrintLog {
 	public static void main(String[] args) {
 		try {
 			// analogous to the driver
-			SimpleDB.init("simpleDBData");
+			SimpleDB.initFileLogAndBufferMgr("simpleDBData");
 
 			LogRecordFwdIterator iter = new LogRecordFwdIterator();
 			while (iter.hasNext()) {
