@@ -1,6 +1,5 @@
 import simpledb.server.SimpleDB;
 import simpledb.tx.recovery.LogRecordIterator;
-import simpledb.tx.recovery.LogRecordFwdIterator;
 import simpledb.tx.recovery.LogRecord;
 
 /**
@@ -14,7 +13,7 @@ public class PrintLog {
 			// analogous to the driver
 			SimpleDB.init("simpleDBData");
 
-			LogRecordFwdIterator iter = new LogRecordFwdIterator();
+			LogRecordIterator iter = new LogRecordIterator();
 			while (iter.hasNext()) {
 				LogRecord rec = iter.next();
 				System.out.println(rec);

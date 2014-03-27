@@ -20,8 +20,8 @@
 	<section name="DialogBounds_SuperInterfaceSelectionDialog">
 		<item value="365" key="DIALOG_WIDTH"/>
 		<item value="340" key="DIALOG_Y_ORIGIN"/>
-		<item value="327" key="DIALOG_HEIGHT"/>
 		<item value="60" key="DIALOG_X_ORIGIN"/>
+		<item value="327" key="DIALOG_HEIGHT"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="quick_assist_proposal_size">
