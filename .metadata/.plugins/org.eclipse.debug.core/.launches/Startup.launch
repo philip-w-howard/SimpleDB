@@ -9,5 +9,5 @@
 <booleanAttribute key="org.eclipse.debug.core.appendEnvironmentVariables" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="simpledb.server.Startup"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SimpleDBServer"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dfile.encoding=UTF8"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dfile.encoding=US-ASCII"/>
 </launchConfiguration>

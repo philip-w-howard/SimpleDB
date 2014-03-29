@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 import simpledb.server.SimpleDB;
 import simpledb.tx.recovery.LogRecordIterator;
 import simpledb.tx.recovery.LogRecordFwdIterator;
@@ -12,9 +14,9 @@ public class PrintLog {
 	public static void main(String[] args) {
 		try {
 			// analogous to the driver
-			SimpleDB.initFileLogAndBufferMgr("simpleDBData");
+			SimpleDB.initFileLogAndBufferMgr("simpleDBDir");
 
-			LogRecordFwdIterator iter = new LogRecordFwdIterator();
+			Iterator<LogRecord> iter = new LogRecordFwdIterator();
 			while (iter.hasNext()) {
 				LogRecord rec = iter.next();
 				System.out.println(rec);

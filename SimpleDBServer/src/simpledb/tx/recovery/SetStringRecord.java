@@ -46,6 +46,7 @@ class SetStringRecord implements LogRecord {
     * @return the LSN of the last log value
     */
    public int writeToLog() {
+//	   if (val.length() == 0) val="<empty>";
       Object[] rec = new Object[] {SETSTRING, txnum, blk.fileName(),
          blk.number(), offset, val};
       return logMgr.append(rec);

@@ -1,6 +1,9 @@
-#Thu Mar 27 13:16:51 PDT 2014
+#Sat Mar 29 13:23:44 PDT 2014
+org.eclipse.debug.ui.switch_perspective_on_suspend=always
+pref_state_memento.org.eclipse.debug.ui.VariableView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684"/>
 eclipse.preferences.version=1
 DEBUG.consoleOpenOnOut=false
+preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|
 org.eclipse.debug.ui.save_dirty_editors_before_launch=always
 org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
-org.eclipse.debug.ui.user_view_bindings=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<viewBindings>\r\n<view id\="org.eclipse.ui.console.ConsoleView">\r\n<perspective id\="org.eclipse.jdt.ui.JavaPerspective" userAction\="closed"/>\r\n</view>\r\n</viewBindings>\r\n
+org.eclipse.debug.ui.user_view_bindings=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<viewBindings>\r\n<view id\="org.eclipse.debug.ui.DebugView">\r\n<perspective id\="org.eclipse.debug.ui.DebugPerspective" userAction\="closed"/>\r\n</view>\r\n<view id\="org.eclipse.ui.console.ConsoleView">\r\n<perspective id\="org.eclipse.jdt.ui.JavaPerspective" userAction\="closed"/>\r\n</view>\r\n</viewBindings>\r\n

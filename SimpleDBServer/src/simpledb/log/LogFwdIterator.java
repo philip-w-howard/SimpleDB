@@ -52,7 +52,6 @@ class LogFwdIterator implements Iterator<BasicLogRecord> {
 	public BasicLogRecord next() {
 		if (recordList.empty()) moveToNextBlock();
 		currentrec = recordList.pop(); 
-		System.out.println("Moving to record " + currentrec);
 		BasicLogRecord rec = new BasicLogRecord(pg, currentrec+INT_SIZE);
 		return rec;
 	}
@@ -67,9 +66,9 @@ class LogFwdIterator implements Iterator<BasicLogRecord> {
 	 */
 	private void moveToNextBlock() {
 		blk = new Block(blk.fileName(), blk.number()+1);
-		System.out.println("Moving to block " + blk.number());
 		pg.read(blk);
 		currentrec = pg.getInt(LogMgr.LAST_POS);
+		currentrec = pg.getInt(currentrec);		// back up one
 		recordList.clear();
 		while (currentrec > 0)
 		{

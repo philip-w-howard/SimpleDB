@@ -107,8 +107,9 @@ public class LogMgr implements Iterable<BasicLogRecord> {
          flush();        // so move to the next block.
          appendNewBlock();
       }
-      for (Object obj : rec)
+      for (Object obj : rec) {
          appendVal(obj);
+      }
       finalizeRecord();
       return currentLSN();
    }
@@ -120,9 +121,11 @@ public class LogMgr implements Iterable<BasicLogRecord> {
     */
    private void appendVal(Object val) {
       if (val instanceof String)
+      {
          mypage.setString(currentpos, (String)val);
-      else
+      } else {
          mypage.setInt(currentpos, (Integer)val);
+      }
       currentpos += size(val);
    }
 

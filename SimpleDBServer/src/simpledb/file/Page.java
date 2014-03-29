@@ -2,6 +2,7 @@ package simpledb.file;
 
 import simpledb.server.SimpleDB;
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.nio.charset.Charset;
 
 /**
@@ -81,7 +82,7 @@ public class Page {
     * {@link simpledb.server.SimpleDB#initFileLogAndBufferMgr(String)}
     * is called first.
     */
-   public Page() {}
+   public Page() {contents.order(ByteOrder.LITTLE_ENDIAN);}
    
    /**
     * Populates the page with the contents of the specified disk block. 

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
-<window height="768" width="1151" x="65" y="61">
+<window height="858" width="1151" x="65" y="61">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="99" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="124" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
-<coolItem id="org.eclipse.ui.WorkingSetActionSet" itemType="typeToolBarContribution" x="50" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="85" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="org.eclipse.ui.WorkingSetActionSet" itemType="typeToolBarContribution" x="53" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="185" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -28,7 +28,7 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
@@ -36,52 +36,97 @@
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PrintLog.java" partName="PrintLog.java" path="C:/Documents and Settings/phil/My Documents/GitHub/SimpleDB/SimpleDBClients/src/PrintLog.java" title="PrintLog.java" tooltip="SimpleDBClients/src/PrintLog.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PrintLog.java" partName="PrintLog.java" path="H:/git/SimpleDB/SimpleDBClients/src/PrintLog.java" title="PrintLog.java" tooltip="SimpleDBClients/src/PrintLog.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBClients/src/PrintLog.java"/>
-<editorState selectionLength="0" selectionOffset="352"/>
+<editorState selectionHPixel="0" selectionLength="10" selectionOffset="528"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogRecordIterator.java" partName="LogRecordIterator.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/tx/recovery/LogRecordIterator.java" title="LogRecordIterator.java" tooltip="SimpleDBServer/src/simpledb/tx/recovery/LogRecordIterator.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/tx/recovery/LogRecordIterator.java"/>
-<editorState selectionHPixel="0" selectionLength="1730" selectionOffset="0"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="1532"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StudentMajorNoServer.java" partName="StudentMajorNoServer.java" path="C:/Documents and Settings/phil/My Documents/GitHub/SimpleDB/SimpleDBClients/src/StudentMajorNoServer.java" title="StudentMajorNoServer.java" tooltip="SimpleDBClients/src/StudentMajorNoServer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBClients/src/StudentMajorNoServer.java"/>
-<editorState selectionLength="0" selectionOffset="575"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogMgr.java" partName="LogMgr.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/log/LogMgr.java" title="LogMgr.java" tooltip="SimpleDBServer/src/simpledb/log/LogMgr.java" workbook="DefaultEditorWorkbook">
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogMgr.java" partName="LogMgr.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/log/LogMgr.java" title="LogMgr.java" tooltip="SimpleDBServer/src/simpledb/log/LogMgr.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/log/LogMgr.java"/>
-<editorState selectionHPixel="0" selectionLength="0" selectionOffset="2618"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="3908"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogRecordFwdIterator.java" partName="LogRecordFwdIterator.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/tx/recovery/LogRecordFwdIterator.java" title="LogRecordFwdIterator.java" tooltip="SimpleDBServer/src/simpledb/tx/recovery/LogRecordFwdIterator.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/tx/recovery/LogRecordFwdIterator.java"/>
 <editorState selectionHPixel="0" selectionLength="0" selectionOffset="582"/>
 </editor>
-<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogFwdIterator.java" partName="LogFwdIterator.java" path="C:/Documents and Settings/phil/My Documents/GitHub/SimpleDB/SimpleDBServer/src/simpledb/log/LogFwdIterator.java" title="LogFwdIterator.java" tooltip="SimpleDBServer/src/simpledb/log/LogFwdIterator.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogFwdIterator.java" partName="LogFwdIterator.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/log/LogFwdIterator.java" title="LogFwdIterator.java" tooltip="SimpleDBServer/src/simpledb/log/LogFwdIterator.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/log/LogFwdIterator.java"/>
-<editorState selectionLength="0" selectionOffset="1681"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="2002"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleDB.java" partName="SimpleDB.java" path="C:/Documents and Settings/phil/My Documents/GitHub/SimpleDB/SimpleDBServer/src/simpledb/server/SimpleDB.java" title="SimpleDB.java" tooltip="SimpleDBServer/src/simpledb/server/SimpleDB.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleDB.java" partName="SimpleDB.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/server/SimpleDB.java" title="SimpleDB.java" tooltip="SimpleDBServer/src/simpledb/server/SimpleDB.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/server/SimpleDB.java"/>
-<editorState selectionLength="0" selectionOffset="2319"/>
+<editorState selectionHPixel="0" selectionLength="16" selectionOffset="1463"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogRecord.java" partName="LogRecord.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/tx/recovery/LogRecord.java" title="LogRecord.java" tooltip="SimpleDBServer/src/simpledb/tx/recovery/LogRecord.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/tx/recovery/LogRecord.java"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DumpPage.java" partName="DumpPage.java" path="H:/git/SimpleDB/SimpleDBClients/src/DumpPage.java" title="DumpPage.java" tooltip="SimpleDBClients/src/DumpPage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBClients/src/DumpPage.java"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="414"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StudentMajorNoServer.java" partName="StudentMajorNoServer.java" path="H:/git/SimpleDB/SimpleDBClients/src/StudentMajorNoServer.java" title="StudentMajorNoServer.java" tooltip="SimpleDBClients/src/StudentMajorNoServer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBClients/src/StudentMajorNoServer.java"/>
+<editorState selectionHPixel="0" selectionLength="1392" selectionOffset="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Startup.java" partName="Startup.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/server/Startup.java" title="Startup.java" tooltip="SimpleDBServer/src/simpledb/server/Startup.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/server/Startup.java"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="220"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogIterator.java" partName="LogIterator.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/log/LogIterator.java" title="LogIterator.java" tooltip="SimpleDBServer/src/simpledb/log/LogIterator.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/log/LogIterator.java"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="1813"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SetStringRecord.java" partName="SetStringRecord.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/tx/recovery/SetStringRecord.java" title="SetStringRecord.java" tooltip="SimpleDBServer/src/simpledb/tx/recovery/SetStringRecord.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/tx/recovery/SetStringRecord.java"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="1849"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Page.java" partName="Page.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/file/Page.java" title="Page.java" tooltip="SimpleDBServer/src/simpledb/file/Page.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/file/Page.java"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="2334"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BasicLogRecord.java" partName="BasicLogRecord.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/log/BasicLogRecord.java" title="BasicLogRecord.java" tooltip="SimpleDBServer/src/simpledb/log/BasicLogRecord.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/log/BasicLogRecord.java"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Transaction.java" partName="Transaction.java" path="H:/git/SimpleDB/SimpleDBServer/src/simpledb/tx/Transaction.java" title="Transaction.java" tooltip="SimpleDBServer/src/simpledb/tx/Transaction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SimpleDBServer/src/simpledb/tx/Transaction.java"/>
+<editorState selectionHPixel="0" selectionLength="16" selectionOffset="1723"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
-<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (4 items)"/>
-</expanded>
-<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+<viewState columnWidth0="250" columnWidth1="75" columnWidth2="150" columnWidth3="60" columnWidth4="0" horizontalPosition="0" verticalPosition="0">
+<columnOrder columnOrderIndex="0"/>
+<columnOrder columnOrderIndex="1"/>
+<columnOrder columnOrderIndex="2"/>
+<columnOrder columnOrderIndex="3"/>
+<columnOrder columnOrderIndex="4"/>
 </viewState>
 </view>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
@@ -108,13 +153,21 @@
 <child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
 <child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
 </xmlDefinedFilters>
 </customFilters>
 </viewState>
 </view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState>
+<isTrackingSelection value="false"/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
@@ -146,7 +199,8 @@
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.tasklist.navigation"/>
+<alwaysOnActionSet id="org.eclipse.update.ui.softwareUpdates"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -184,6 +238,7 @@
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>
@@ -194,7 +249,7 @@
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="Hierarchy"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
 <part id="0"/>
 <part id="1"/>
 </presentation>
@@ -208,21 +263,22 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7492877" ratioLeft="526" ratioRight="176" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.6734417" ratioLeft="497" ratioRight="241" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.console.ConsoleView:Console View #1" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
@@ -235,8 +291,93 @@
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
 <part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.tasklist.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.WorkingSetActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.update.ui.softwareUpdates"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<show_in_time id="org.eclipse.jdt.ui.PackageExplorer" time="1396125028996"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.74977815" ratioLeft="845" ratioRight="282" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74961597" ratioLeft="488" ratioRight="163" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.4487705" ratioLeft="219" ratioRight="269" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.74977815" ratioLeft="845" ratioRight="282" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.49955633" ratioLeft="563" ratioRight="564" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -247,111 +388,169 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBClients/src/PrintLog.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/tx/recovery/LogRecordIterator.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBClients/src/StudentMajorNoServer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/file/Page.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/log/LogMgr.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/tx/recovery/LogRecordFwdIterator.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBClients/src/DumpPage.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/file/Page.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/log/LogMgr.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/server/Startup.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBClients/src/CreateStudentDB.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBClients/src/PrintLog.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/index/planner/IndexUpdatePlanner.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/log/LogFwdIterator.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/log/LogIterator.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/tx/Transaction.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/server/SimpleDB.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBClients/src/StudentMajorNoServer.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SimpleDBServer/src/simpledb/log/LogFwdIterator.java"/>
 </editors>
-<item historyLabel="PrintLog.java" index="0">
+<item historyLabel="LogMgr.java" index="1">
+<position info="not_deleted" x="3403" y="0"/>
+</item>
+<item historyLabel="LogMgr.java" index="1">
+<position info="not_deleted" x="3971" y="0"/>
+</item>
+<item historyLabel="LogMgr.java" index="1">
+<position info="not_deleted" x="4015" y="0"/>
+</item>
+<item historyLabel="LogMgr.java" index="1">
+<position info="not_deleted" x="4014" y="0"/>
+</item>
+<item historyLabel="LogMgr.java" index="1">
+<position info="not_deleted" x="4030" y="0"/>
+</item>
+<item historyLabel="LogMgr.java" index="1">
+<position info="not_deleted" x="4316" y="0"/>
+</item>
+<item historyLabel="LogMgr.java" index="1">
+<position info="not_deleted" x="4435" y="9"/>
+</item>
+<item historyLabel="Page.java" index="0">
+<position info="not_deleted" x="1682" y="24"/>
+</item>
+<item historyLabel="DumpPage.java" index="2">
+<position info="not_deleted" x="332" y="0"/>
+</item>
+<item historyLabel="Page.java" index="3">
+<position info="not_deleted" x="1682" y="24"/>
+</item>
+<item historyLabel="DumpPage.java" index="2">
+<position info="not_deleted" x="414" y="0"/>
+</item>
+<item historyLabel="Page.java" index="3">
+<position info="not_deleted" x="2249" y="85"/>
+</item>
+<item historyLabel="DumpPage.java" index="2">
+<position info="not_deleted" x="414" y="0"/>
+</item>
+<item historyLabel="DumpPage.java" index="2">
 <position/>
 </item>
-<item historyLabel="LogRecordIterator.java" index="1">
+<item historyLabel="DumpPage.java" index="2">
 <position/>
 </item>
-<item historyLabel="PrintLog.java" index="0">
+<item historyLabel="DumpPage.java" index="2">
+<position info="not_deleted" x="414" y="0"/>
+</item>
+<item historyLabel="DumpPage.java" index="2">
+<position info="not_deleted" x="356" y="0"/>
+</item>
+<item historyLabel="Page.java" index="3">
+<position info="not_deleted" x="2249" y="85"/>
+</item>
+<item historyLabel="LogMgr.java" index="4">
+<position info="not_deleted" x="4209" y="9"/>
+</item>
+<item historyLabel="LogMgr.java" index="4">
 <position/>
 </item>
-<item historyLabel="StudentMajorNoServer.java" index="2">
+<item historyLabel="LogMgr.java" index="4">
 <position/>
 </item>
-<item historyLabel="PrintLog.java" index="0">
+<item historyLabel="LogMgr.java" index="4">
 <position/>
 </item>
-<item historyLabel="StudentMajorNoServer.java" index="2">
-<position info="not_deleted" x="528" y="0"/>
-</item>
-<item historyLabel="PrintLog.java" index="0">
+<item historyLabel="LogMgr.java" index="4">
 <position/>
 </item>
-<item historyLabel="StudentMajorNoServer.java" index="2">
-<position info="not_deleted" x="435" y="40"/>
-</item>
-<item historyLabel="PrintLog.java" index="0">
+<item historyLabel="LogMgr.java" index="4">
 <position/>
 </item>
-<item historyLabel="LogMgr.java" index="3">
+<item historyLabel="LogMgr.java" index="4">
 <position/>
 </item>
-<item historyLabel="LogRecordIterator.java" index="1">
-<position info="not_deleted" x="462" y="17"/>
-</item>
-<item historyLabel="LogRecordFwdIterator.java" index="4">
+<item historyLabel="LogMgr.java" index="4">
 <position/>
 </item>
-<item historyLabel="LogRecordIterator.java" index="1">
-<position info="not_deleted" x="0" y="1730"/>
+<item historyLabel="LogMgr.java" index="4">
+<position info="not_deleted" x="4493" y="0"/>
 </item>
-<item historyLabel="LogRecordFwdIterator.java" index="4">
+<item historyLabel="LogMgr.java" index="4">
 <position/>
 </item>
-<item historyLabel="LogMgr.java" index="3">
+<item historyLabel="LogMgr.java" index="4">
 <position/>
 </item>
-<item historyLabel="LogFwdIterator.java" index="5">
+<item historyLabel="LogMgr.java" index="4">
+<position info="not_deleted" x="4560" y="0"/>
+</item>
+<item historyLabel="Page.java" index="3">
+<position info="not_deleted" x="2249" y="85"/>
+</item>
+<item historyLabel="Page.java" index="3">
 <position/>
 </item>
-<item historyLabel="LogMgr.java" index="3">
-<position info="not_deleted" x="2609" y="0"/>
+<item historyLabel="DumpPage.java" index="2">
+<position info="not_deleted" x="356" y="0"/>
 </item>
-<item historyLabel="LogMgr.java" index="3">
-<position info="not_deleted" x="2618" y="0"/>
+<item historyLabel="Startup.java" index="5">
+<position/>
 </item>
-<item historyLabel="LogRecordFwdIterator.java" index="4">
-<position info="not_deleted" x="582" y="0"/>
+<item historyLabel="CreateStudentDB.java" index="6">
+<position info="not_deleted" x="424" y="10"/>
 </item>
-<item historyLabel="PrintLog.java" index="0">
-<position info="not_deleted" x="205" y="0"/>
+<item historyLabel="DumpPage.java" index="2">
+<position/>
 </item>
-<item historyLabel="PrintLog.java" index="0">
-<position info="not_deleted" x="389" y="20"/>
+<item historyLabel="PrintLog.java" index="7">
+<position info="not_deleted" x="448" y="0"/>
 </item>
-<item historyLabel="PrintLog.java" index="0">
-<position info="not_deleted" x="122" y="0"/>
+<item historyLabel="PrintLog.java" index="7">
+<position info="not_deleted" x="528" y="10"/>
 </item>
-<item historyLabel="PrintLog.java" index="0">
-<position info="not_deleted" x="385" y="26"/>
+<item historyLabel="Page.java" index="3">
+<position info="not_deleted" x="2334" y="0"/>
 </item>
-<item historyLabel="SimpleDB.java" index="6">
-<position info="not_deleted" x="1323" y="23"/>
+<item historyLabel="IndexUpdatePlanner.java" index="8">
+<position info="not_deleted" x="1170" y="10"/>
 </item>
-<item historyLabel="SimpleDB.java" index="6">
+<item historyLabel="LogFwdIterator.java" index="9">
+<position info="not_deleted" x="2116" y="0"/>
+</item>
+<item historyLabel="LogFwdIterator.java" index="9">
+<position/>
+</item>
+<item historyLabel="LogIterator.java" index="10">
+<position/>
+</item>
+<item historyLabel="LogIterator.java" index="10">
+<position info="not_deleted" x="1813" y="0"/>
+</item>
+<item historyLabel="LogMgr.java" index="4">
+<position info="not_deleted" x="5300" y="0"/>
+</item>
+<item historyLabel="Transaction.java" index="11">
+<position info="not_deleted" x="1723" y="16"/>
+</item>
+<item historyLabel="SimpleDB.java" index="12">
 <position info="not_deleted" x="2319" y="0"/>
 </item>
-<item historyLabel="PrintLog.java" index="0">
-<position info="not_deleted" x="183" y="0"/>
+<item historyLabel="SimpleDB.java" index="12">
+<position info="not_deleted" x="1463" y="16"/>
 </item>
-<item historyLabel="PrintLog.java" index="0">
-<position info="not_deleted" x="328" y="0"/>
+<item historyLabel="Startup.java" index="5">
+<position info="not_deleted" x="220" y="0"/>
 </item>
-<item historyLabel="StudentMajorNoServer.java" index="7">
+<item active="true" historyLabel="LogMgr.java" index="4">
 <position/>
-</item>
-<item historyLabel="LogFwdIterator.java" index="8">
-<position info="not_deleted" x="2041" y="0"/>
-</item>
-<item historyLabel="LogFwdIterator.java" index="8">
-<position info="not_deleted" x="2112" y="0"/>
-</item>
-<item historyLabel="LogFwdIterator.java" index="8">
-<position info="not_deleted" x="2113" y="0"/>
-</item>
-<item active="true" historyLabel="LogFwdIterator.java" index="8">
-<position info="not_deleted" x="1679" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -370,6 +569,30 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreateStudentDB.java" tooltip="SimpleDBClients/src/CreateStudentDB.java">
+<persistable path="/SimpleDBClients/src/CreateStudentDB.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BasicLogRecord.java" tooltip="SimpleDBServer/src/simpledb/log/BasicLogRecord.java">
+<persistable path="/SimpleDBServer/src/simpledb/log/BasicLogRecord.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SetStringRecord.java" tooltip="SimpleDBServer/src/simpledb/tx/recovery/SetStringRecord.java">
+<persistable path="/SimpleDBServer/src/simpledb/tx/recovery/SetStringRecord.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogIterator.java" tooltip="SimpleDBServer/src/simpledb/log/LogIterator.java">
+<persistable path="/SimpleDBServer/src/simpledb/log/LogIterator.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Startup.java" tooltip="SimpleDBServer/src/simpledb/server/Startup.java">
+<persistable path="/SimpleDBServer/src/simpledb/server/Startup.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StudentMajorNoServer.java" tooltip="SimpleDBClients/src/StudentMajorNoServer.java">
+<persistable path="/SimpleDBClients/src/StudentMajorNoServer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DumpPage.java" tooltip="SimpleDBClients/src/DumpPage.java">
+<persistable path="/SimpleDBClients/src/DumpPage.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogRecord.java" tooltip="SimpleDBServer/src/simpledb/tx/recovery/LogRecord.java">
+<persistable path="/SimpleDBServer/src/simpledb/tx/recovery/LogRecord.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleDB.java" tooltip="SimpleDBServer/src/simpledb/server/SimpleDB.java">
 <persistable path="/SimpleDBServer/src/simpledb/server/SimpleDB.java"/>
 </file>
@@ -382,9 +605,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogMgr.java" tooltip="SimpleDBServer/src/simpledb/log/LogMgr.java">
 <persistable path="/SimpleDBServer/src/simpledb/log/LogMgr.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StudentMajorNoServer.java" tooltip="SimpleDBClients/src/StudentMajorNoServer.java">
-<persistable path="/SimpleDBClients/src/StudentMajorNoServer.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogRecordIterator.java" tooltip="SimpleDBServer/src/simpledb/tx/recovery/LogRecordIterator.java">
 <persistable path="/SimpleDBServer/src/simpledb/tx/recovery/LogRecordIterator.java"/>
 </file>
@@ -393,27 +613,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FileMgr.java" tooltip="SimpleDBServer/src/simpledb/file/FileMgr.java">
 <persistable path="/SimpleDBServer/src/simpledb/file/FileMgr.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogIterator.java" tooltip="SimpleDBServer/src/simpledb/log/LogIterator.java">
-<persistable path="/SimpleDBServer/src/simpledb/log/LogIterator.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SQLInterpreter.java" tooltip="SimpleDBClients/src/SQLInterpreter.java">
-<persistable path="/SimpleDBClients/src/SQLInterpreter.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FindMajors.java" tooltip="SimpleDBClients/src/FindMajors.java">
-<persistable path="/SimpleDBClients/src/FindMajors.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreateStudentDB.java" tooltip="SimpleDBClients/src/CreateStudentDB.java">
-<persistable path="/SimpleDBClients/src/CreateStudentDB.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BufferList.java" tooltip="SimpleDBServer/src/simpledb/tx/BufferList.java">
-<persistable path="/SimpleDBServer/src/simpledb/tx/BufferList.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Transaction.java" tooltip="SimpleDBServer/src/simpledb/tx/Transaction.java">
-<persistable path="/SimpleDBServer/src/simpledb/tx/Transaction.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BasicBufferMgr.java" tooltip="SimpleDBServer/src/simpledb/buffer/BasicBufferMgr.java">
-<persistable path="/SimpleDBServer/src/simpledb/buffer/BasicBufferMgr.java"/>
 </file>
 </mruList>
 </workbench>
