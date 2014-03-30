@@ -1,5 +1,0 @@
-package simpledb.log;
-
-public class LogFwdIterator {
-
-}

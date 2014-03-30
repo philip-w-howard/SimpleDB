@@ -1,5 +1,0 @@
-package simpledb.tx.recovery;
-
-public class LogRecordFwdIterator {
-
-}
