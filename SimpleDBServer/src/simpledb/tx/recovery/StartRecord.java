@@ -2,7 +2,7 @@ package simpledb.tx.recovery;
 
 import simpledb.log.BasicLogRecord;
 
-class StartRecord implements LogRecord {
+public class StartRecord implements LogRecord {
    private int txnum;
    
    /**

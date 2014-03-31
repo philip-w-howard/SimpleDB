@@ -8,6 +8,8 @@ import simpledb.query.Scan;
 import simpledb.remote.SimpleDriver;
 import simpledb.server.SimpleDB;
 import simpledb.tx.Transaction;
+import simpledb.tx.recovery.CheckpointRecord;
+import simpledb.tx.recovery.StartRecord;
 
 
 public class CreateRecoveryData {
@@ -30,6 +32,9 @@ public class CreateRecoveryData {
 			String create = "create table RECOVERYDATA(RName varchar(10), RId int, Text varchar(20))";
 			SimpleDB.planner().executeUpdate(create, tx);
 
+			String delete = "delete from RECOVERYDATA";
+			SimpleDB.planner().executeUpdate(delete, tx);
+			
 			String cmd = "insert into RECOVERYDATA(RName, RId, Text) values ";
 			String[] recovervals = {
 					"('record1', 1, 'This')", //
@@ -48,6 +53,7 @@ public class CreateRecoveryData {
 					"('record14', 14, 'sentences.')", //		points
 					"('record15', 15, 'bogus stuff')", //
 					"('record16', 99, 'more stuff')"
+
 			};
 			for (int i=0; i<recovervals.length; i++) {
 				System.out.println(cmd+recovervals[i]);
@@ -56,6 +62,12 @@ public class CreateRecoveryData {
 			tx.commit();
 			System.out.println("RECOVERYDATA records inserted.");
 
+			CheckpointRecord checkpoint = new CheckpointRecord();
+			checkpoint.writeToLog();
+			
+			StartRecord start = new StartRecord(100);
+			start.writeToLog();
+			
 			tx = new Transaction();
 			String select = "select RName, RId, Text from RECOVERYDATA";
 			Plan p = SimpleDB.planner().createQueryPlan(select, tx);

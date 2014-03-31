@@ -119,6 +119,7 @@ public class RecoveryMgr {
       Iterator<LogRecord> iter = new LogRecordIterator();
       while (iter.hasNext()) {
          LogRecord rec = iter.next();
+   	  System.out.println(rec);
          if (rec.op() == CHECKPOINT)
             return;
          if (rec.op() == COMMIT || rec.op() == ROLLBACK)

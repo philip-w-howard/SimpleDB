@@ -1,5 +1,6 @@
 import java.util.Iterator;
 
+import simpledb.file.Block;
 import simpledb.server.SimpleDB;
 import simpledb.tx.recovery.LogRecordIterator;
 import simpledb.tx.recovery.LogRecordFwdIterator;
@@ -26,7 +27,8 @@ public class PrintLog {
 			
 			System.out.println("Going forward...");
 			
-			Iterator<LogRecord> fwdIter = new LogRecordFwdIterator((LogRecordIterator) iter);
+//			Iterator<LogRecord> fwdIter = new LogRecordFwdIterator((LogRecordIterator) iter);
+			Iterator<LogRecord> fwdIter = new LogRecordFwdIterator();
 			while (fwdIter.hasNext()) {
 				LogRecord rec = fwdIter.next();
 				System.out.println(rec);

@@ -14,7 +14,6 @@ public class DumpPage {
 		try {
 			// analogous to the driver
 			SimpleDB.initFileLogAndBufferMgr("simpleDBDir");
-		    float bytesPerChar = (int)Charset.defaultCharset().newEncoder().maxBytesPerChar();
 
 			//Block blk = new Block("simpledb.log", 1);
 			Block blk = new Block("tblcat.tbl", 0);

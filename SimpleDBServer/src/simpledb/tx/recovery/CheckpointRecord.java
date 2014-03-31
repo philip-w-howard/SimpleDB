@@ -6,7 +6,7 @@ import simpledb.log.BasicLogRecord;
  * The CHECKPOINT log record.
  * @author Edward Sciore
  */
-class CheckpointRecord implements LogRecord {
+public class CheckpointRecord implements LogRecord {
    
    /**
     * Creates a quiescent checkpoint record.
