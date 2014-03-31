@@ -3,6 +3,7 @@ package simpledb.tx.recovery;
 import static simpledb.tx.recovery.LogRecord.*;
 import java.util.Iterator;
 import simpledb.log.BasicLogRecord;
+import simpledb.log.LogIterator;
 import simpledb.server.SimpleDB;
 
 /**
@@ -20,6 +21,9 @@ public class LogRecordIterator implements Iterator<LogRecord> {
       return iter.hasNext();
    }
    
+   public LogIterator iter() {
+	   return (LogIterator) iter;
+   }
    /**
     * Constructs a log record from the values in the 
     * current basic log record.

@@ -12,13 +12,23 @@ import simpledb.tx.recovery.LogRecord;
 public class PrintLog {
 
 	public static void main(String[] args) {
+		int count = 0;
 		try {
 			// analogous to the driver
 			SimpleDB.initFileLogAndBufferMgr("simpleDBDir");
 
-			Iterator<LogRecord> iter = new LogRecordFwdIterator();
-			while (iter.hasNext()) {
+			Iterator<LogRecord> iter = new LogRecordIterator();
+			while (iter.hasNext() && count<10) {
 				LogRecord rec = iter.next();
+				System.out.println(rec);
+				count++;
+			}
+			
+			System.out.println("Going forward...");
+			
+			Iterator<LogRecord> fwdIter = new LogRecordFwdIterator((LogRecordIterator) iter);
+			while (fwdIter.hasNext()) {
+				LogRecord rec = fwdIter.next();
 				System.out.println(rec);
 			}
 

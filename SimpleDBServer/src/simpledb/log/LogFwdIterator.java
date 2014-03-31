@@ -20,7 +20,7 @@ class LogFwdIterator implements Iterator<BasicLogRecord> {
 	private Stack<Integer> recordList = new Stack<Integer>();
 
 	/**
-	 * Creates an iterator for the records in the log file,
+	 * Creates a forward iterator for the records in the log file,
 	 * positioned after the last log record.
 	 * This constructor is called exclusively by
 	 * {@link LogMgr#fwdIterator()}.
@@ -29,6 +29,29 @@ class LogFwdIterator implements Iterator<BasicLogRecord> {
 	LogFwdIterator(Block blk) {
 		this.blk = new Block(blk.fileName(), blk.number()-1);
 		moveToNextBlock();
+	}
+
+	/**
+	 * Creates an iterator for the records in the log file,
+	 * positioned after the last log record.
+	 * This constructor is called exclusively by
+	 * {@link LogMgr#fwdIterator()}.
+	 * @param blk The block to start the iterator at
+	 */
+	LogFwdIterator(LogIterator revIter) {
+		Block revBlk = revIter.currentBlock();
+		this.blk = new Block(revBlk.fileName(), revBlk.number()-1);
+		moveToNextBlock();
+		
+		// move through the block to the revIter.currentrec
+		while (!recordList.empty())
+		{
+			currentrec = recordList.pop();
+			if (currentrec == revIter.currentRec()) {
+				recordList.push(currentrec);
+				break;
+			}
+		}
 	}
 
 	/**

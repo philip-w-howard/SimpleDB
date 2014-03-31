@@ -10,7 +10,7 @@ import java.util.Iterator;
  * 
  * @author Edward Sciore
  */
-class LogIterator implements Iterator<BasicLogRecord> {
+public class LogIterator implements Iterator<BasicLogRecord> {
    private Block blk;
    private Page pg = new Page();
    private int currentrec;
@@ -48,6 +48,16 @@ class LogIterator implements Iterator<BasicLogRecord> {
          moveToNextBlock();
       currentrec = pg.getInt(currentrec);
       return new BasicLogRecord(pg, currentrec+INT_SIZE);
+   }
+   
+   public Block currentBlock()
+   {
+	   return blk;
+   }
+   
+   public int currentRec()
+   {
+	   return currentrec;
    }
    
    public void remove() {

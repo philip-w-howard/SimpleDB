@@ -73,10 +73,25 @@ public class LogMgr implements Iterable<BasicLogRecord> {
 	      return new LogIterator(currentblk);
 	   }
 
-   public synchronized Iterator<BasicLogRecord> fwdIterator() {
+   /**
+    * Returns a forward iterator for the log records,
+    * starting with the first record in the file.
+    * @see java.lang.Iterable#iterator()
+    */
+  public synchronized Iterator<BasicLogRecord> fwdIterator() {
 	      flush();
 	      Block blk = new Block(logfile, 0);
 	      return new LogFwdIterator(blk);
+	   }
+
+  /**
+   * Returns a forward iterator for the log records,
+   * starting with the record that the reverse iterator ended with.
+   * @see java.lang.Iterable#iterator()
+   */
+ public synchronized Iterator<BasicLogRecord> fwdIterator(LogIterator revIter) {
+	      flush();
+	      return new LogFwdIterator(revIter);
 	   }
 
    /**

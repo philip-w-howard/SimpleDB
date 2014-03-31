@@ -16,6 +16,9 @@ import simpledb.server.SimpleDB;
 public class LogRecordFwdIterator implements Iterator<LogRecord> {
    private Iterator<BasicLogRecord> iter = SimpleDB.logMgr().fwdIterator();
    
+   public LogRecordFwdIterator(LogRecordIterator revIter) {
+	   iter = SimpleDB.logMgr().fwdIterator(revIter.iter());
+   }
    public boolean hasNext() {
       return iter.hasNext();
    }
