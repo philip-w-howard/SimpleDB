@@ -6,7 +6,7 @@ import simpledb.log.BasicLogRecord;
  * The ROLLBACK log record.
  * @author Edward Sciore
  */
-class RollbackRecord implements LogRecord {
+public class RollbackRecord implements LogRecord {
    private int txnum;
    
    /**

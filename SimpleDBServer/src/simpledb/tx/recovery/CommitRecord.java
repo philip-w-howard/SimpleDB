@@ -6,7 +6,7 @@ import simpledb.log.BasicLogRecord;
  * The COMMIT log record
  * @author Edward Sciore
  */
-class CommitRecord implements LogRecord {
+public class CommitRecord implements LogRecord {
    private int txnum;
    
    /**

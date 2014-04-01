@@ -5,7 +5,7 @@ import simpledb.buffer.*;
 import simpledb.file.Block;
 import simpledb.log.BasicLogRecord;
 
-class SetStringRecord implements LogRecord {
+public class SetStringRecord implements LogRecord {
    private int txnum, offset;
    private String oldval, newval;
    private Block blk;

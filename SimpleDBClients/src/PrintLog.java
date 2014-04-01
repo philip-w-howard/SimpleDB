@@ -19,16 +19,16 @@ public class PrintLog {
 			SimpleDB.initFileLogAndBufferMgr("simpleDBDir");
 
 			Iterator<LogRecord> iter = new LogRecordIterator();
-			while (iter.hasNext() && count<10) {
+			while (iter.hasNext()) {
 				LogRecord rec = iter.next();
 				System.out.println(rec);
-				count++;
+				if (rec.op()== LogRecord.CHECKPOINT) break;
 			}
 			
 			System.out.println("Going forward...");
 			
-//			Iterator<LogRecord> fwdIter = new LogRecordFwdIterator((LogRecordIterator) iter);
-			Iterator<LogRecord> fwdIter = new LogRecordFwdIterator();
+			Iterator<LogRecord> fwdIter = new LogRecordFwdIterator((LogRecordIterator) iter);
+//			Iterator<LogRecord> fwdIter = new LogRecordFwdIterator();
 			while (fwdIter.hasNext()) {
 				LogRecord rec = fwdIter.next();
 				System.out.println(rec);
