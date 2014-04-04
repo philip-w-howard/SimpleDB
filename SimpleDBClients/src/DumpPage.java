@@ -16,7 +16,7 @@ public class DumpPage {
 			SimpleDB.initFileLogAndBufferMgr("simpleDBDir");
 
 			//Block blk = new Block("simpledb.log", 1);
-			Block blk = new Block("tblcat.tbl", 0);
+			Block blk = new Block("student.tbl", 0);
 			Page p1 = new Page();
 			p1.read(blk);
 			for (int ii = 0; ii < 100; ii++) {

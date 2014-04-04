@@ -82,7 +82,7 @@ public class Page {
     * {@link simpledb.server.SimpleDB#initFileLogAndBufferMgr(String)}
     * is called first.
     */
-   public Page() {contents.order(ByteOrder.LITTLE_ENDIAN);}
+   public Page() {}
    
    /**
     * Populates the page with the contents of the specified disk block. 
