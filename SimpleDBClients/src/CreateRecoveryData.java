@@ -99,7 +99,7 @@ public class CreateRecoveryData {
 			// <SETSTRING 100 [file recoverydata.tbl, block 0] 110 ‘flummoxed’ ‘is’>
 			new SetStringRecord(100, block_0, 110, "flummoxed", "is").writeToLog();
 			// <SETINT 100 [file recoverydata.tbl, block 1] 68 45 4>
-			new SetIntRecord(100, block_1, 68, 45, 5).writeToLog();
+			new SetIntRecord(100, block_1, 68, 45, 4).writeToLog();
 			
 			// <START 101>
 			new StartRecord(101).writeToLog();
@@ -164,7 +164,9 @@ public class CreateRecoveryData {
 			// <SETINT 2 [file recoverydata.tbl, block 5] 68 0 99>
 			new SetIntRecord(106, block_5, 68, 0, 99).writeToLog();
 			// <SETSTRING 106 [file recoverydata.tbl, block 5] 4 ‘’ ‘more stuff’>
-			new SetStringRecord(106, block_5, 4, "", "more stuff").writeToLog();
+			SetStringRecord last = new SetStringRecord(106, block_5, 4, "", "more stuff");
+			int lsn = last.writeToLog();
+			SimpleDB.logMgr().flush(lsn);
 			// SKIP <ROLLBACK 106> SKIP
 			
 		} catch (Exception e) {
