@@ -43,4 +43,13 @@ public interface LogRecord {
     * @param txnum the id of the transaction that is performing the undo.
     */
    void undo(int txnum);
+ 
+   /**
+    * Redoes the operation encoded by this log record.
+    * This method is used during the redo phase of recovery.
+    * The only log record types for which this method
+    * does anything interesting are SETINT and SETSTRING.
+    * @param txnum the id of the transaction that is performing the redo.
+    */
+   void redo(int txnum);
 }

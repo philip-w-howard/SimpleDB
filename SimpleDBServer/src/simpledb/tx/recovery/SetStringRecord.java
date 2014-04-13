@@ -68,7 +68,7 @@ public class SetStringRecord implements LogRecord {
    }
    
    /** 
-    * Replaces the specified data value with the value saved in the log record.
+    * Replaces the specified data value with the old value saved in the log record.
     * The method pins a buffer to the specified block,
     * calls setString to restore the saved value
     * (using a dummy LSN), and unpins the buffer.
@@ -80,4 +80,20 @@ public class SetStringRecord implements LogRecord {
       buff.setString(offset, oldval, txnum, -1);
       buffMgr.unpin(buff);
    }
+   
+   /** 
+    * Replaces the specified data value with the value new saved in the log record.
+    * The method pins a buffer to the specified block,
+    * calls setString to restore the saved value
+    * (using a dummy LSN), and unpins the buffer.
+    * @see simpledb.tx.recovery.LogRecord#redo(int)
+    */
+   public void redo(int txnum) {
+      BufferMgr buffMgr = SimpleDB.bufferMgr();
+      Buffer buff = buffMgr.pin(blk);
+      buff.setString(offset, newval, txnum, -1);
+      buffMgr.unpin(buff);
+   }
+   
+
 }

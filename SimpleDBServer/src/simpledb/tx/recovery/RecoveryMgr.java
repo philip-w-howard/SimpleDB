@@ -109,24 +109,42 @@ public class RecoveryMgr {
    /**
     * Does a complete database recovery.
     * The method iterates through the log records.
-    * Whenever it finds a log record for an unfinished
+    * Whenever it finds a log record for a non-committed
     * transaction, it calls undo() on that record.
-    * The method stops when it encounters a CHECKPOINT record
-    * or the end of the log.
+    * Once a CHECPOINT record is found (or the end of the log), 
+    * the method iterates forward through the log redoing the updates
+    * from committed transactions. Redos are performed by calling redo()
+    * on the relevant records.
     */
    private void doRecover() {
-      Collection<Integer> finishedTxs = new ArrayList<Integer>();
+      Collection<Integer> committedTxs = new ArrayList<Integer>();
+      
+      // undo phase
       Iterator<LogRecord> iter = new LogRecordIterator();
       while (iter.hasNext()) {
          LogRecord rec = iter.next();
-   	  System.out.println(rec);
          if (rec.op() == CHECKPOINT)
-            return;
-         if (rec.op() == COMMIT || rec.op() == ROLLBACK)
-            finishedTxs.add(rec.txNumber());
-         else if (!finishedTxs.contains(rec.txNumber()))
+            break;
+         else if (rec.op() == COMMIT)
+        	 committedTxs.add(rec.txNumber());
+         else if (!committedTxs.contains(rec.txNumber()))
+         {
             rec.undo(txnum);
+       	    System.out.println("undo: " + rec);
+         }
       }
+      
+      // redo phase
+	  iter = new LogRecordFwdIterator((LogRecordIterator) iter);
+      while (iter.hasNext()) {
+          LogRecord rec = iter.next();
+          if (committedTxs.contains(rec.txNumber()))
+          {
+             rec.redo(txnum);
+        	 System.out.println("redo: " + rec);
+          }
+       }
+
    }
 
    /**

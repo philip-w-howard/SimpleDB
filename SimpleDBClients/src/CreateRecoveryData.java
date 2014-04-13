@@ -47,7 +47,7 @@ public class CreateRecoveryData {
 					"('record3', 3, 'a')", //
 					"('record4', 45, 'mollusk')", //			4, test
 					"('record5', 5, 'of')", //				55
-					"('record6', 6, 'recovery.')", // 			12, your code
+					"('record6', 12, 'your code.')", // 			6 recovery. 12, your code
 					"('record7', 7, 'If')", //
 					"('record8', 8, 'pizza')", //			it
 					"('record9', 9, 'works')", //			91, blows up
