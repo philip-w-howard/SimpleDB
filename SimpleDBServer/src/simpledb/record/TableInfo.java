@@ -62,6 +62,14 @@ public class TableInfo {
    }
    
    /**
+    * Returns the name of this table.
+    * @return the name of the table
+    */
+   public String tableName() {
+      return tblname;
+   }
+   
+   /**
     * Returns the schema of the table's records
     * @return the table's record schema
     */

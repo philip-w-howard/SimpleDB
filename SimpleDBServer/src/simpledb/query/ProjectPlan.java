@@ -68,4 +68,17 @@ public class ProjectPlan implements Plan {
    public Schema schema() {
       return schema;
    }
+   
+   public String toString()
+   {
+	   String returnVal = "(Project: " + p + "{";
+	   for (String field : schema.fields())
+	   {
+		   returnVal += field + ", ";
+	   }
+	   // trim the last ", "
+	   returnVal = returnVal.substring(0, returnVal.length()-2);   
+	   returnVal += "})";
+	   return returnVal;
+   }
 }
