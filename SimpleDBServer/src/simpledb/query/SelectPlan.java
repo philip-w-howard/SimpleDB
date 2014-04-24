@@ -1,5 +1,6 @@
 package simpledb.query;
 
+import java.util.Iterator;
 import simpledb.record.Schema;
 
 /** The Plan class corresponding to the <i>select</i>
@@ -85,5 +86,69 @@ public class SelectPlan implements Plan {
    public String toString()
    {
 	   return "(Select: " + p + "{" + pred + "})";
+   }
+   /**
+    * compares two plans
+    * @return true if the plans are the same
+    */
+   public boolean equals(Plan p)
+   {
+       if (!(p instanceof SelectPlan)) return false;
+       SelectPlan sp = (SelectPlan)p;
+       return this.p.equals(sp.p) && this.pred.equals(sp.pred);
+   }
+
+   /**
+    * Checks if the plan contains p
+    * @param p the plan being looked for
+    * @return true if the plan contains p
+    */
+   public boolean contains(Plan p)
+   {
+       return p.equals(this);
+   }
+   
+   /**
+    * Returns an iterator for the plan. Iterator runs through all sub-plans
+    * @return iterator for the plan
+    */
+   public Iterator<Plan> iterator()
+   {
+       return new SPIter(this);
+   }
+   
+   /**
+    * Iterator for TablePlan. Returns the single item which is the table name.
+    */
+   private class SPIter implements Iterator<Plan>
+   {
+       private boolean done = false;
+       private SelectPlan plan;
+       private Iterator<Plan> iter;
+       
+       public SPIter(SelectPlan plan)
+       { 
+    	   this.plan = plan;
+    	   iter = plan.iterator();
+       }
+       
+       public boolean hasNext()
+       { 
+    	   return !done || iter.hasNext(); 
+       }
+       
+       public Plan next()
+       {
+    	   if (!done)
+    	   {
+    		   done = true;
+    		   return plan;
+    	   } else {
+  			   return iter.next();
+    	   }
+       }
+       
+       public void remove()
+       { throw new UnsupportedOperationException(); }
    }
 }

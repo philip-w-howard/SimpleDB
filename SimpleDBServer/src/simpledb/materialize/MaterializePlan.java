@@ -1,6 +1,9 @@
 package simpledb.materialize;
 
 import static simpledb.file.Page.BLOCK_SIZE;
+
+import java.util.Iterator;
+
 import simpledb.tx.Transaction;
 import simpledb.record.*;
 import simpledb.query.*;
@@ -84,4 +87,26 @@ public class MaterializePlan implements Plan {
    public Schema schema() {
       return srcplan.schema();
    }
+
+   /**
+    * Tests for equality of plans
+    * @return true if the plans are equal
+    */
+   public boolean equals(Plan p)
+   { throw new UnsupportedOperationException(); }
+   
+   /**
+    * Checks if the plan contains p
+    * @param p the plan being looked for
+    * @return true if the plan contains p
+    */
+   public boolean contains(Plan p)
+   { throw new UnsupportedOperationException(); }
+
+   /**
+    * Returns an iterator for all the subplans in the plan
+    * @return iterator for the plan
+    */
+   public Iterator<Plan> iterator()
+   { throw new UnsupportedOperationException(); }
 }

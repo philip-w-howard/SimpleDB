@@ -1,5 +1,6 @@
 package simpledb.query;
 
+import java.util.Iterator;
 import simpledb.record.Schema;
 import java.util.Collection;
 
@@ -80,5 +81,70 @@ public class ProjectPlan implements Plan {
 	   returnVal = returnVal.substring(0, returnVal.length()-2);   
 	   returnVal += "})";
 	   return returnVal;
+   }
+
+   /**
+    * compares two plans
+    * @return true if the plans are the same
+    */
+   public boolean equals(Plan p)
+   {
+       if (!(p instanceof ProjectPlan)) return false;
+       ProjectPlan pp = (ProjectPlan)p;
+       return this.p.equals(pp.p) && this.schema.equals(pp.schema);
+   }
+
+   /**
+    * Checks if the plan contains p
+    * @param p the plan being looked for
+    * @return true if the plan contains p
+    */
+   public boolean contains(Plan p)
+   {
+       return p.equals(this);
+   }
+   
+   /**
+    * Returns an iterator for the plan. Iterator runs through all sub-plans
+    * @return iterator for the plan
+    */
+   public Iterator<Plan> iterator()
+   {
+       return new PrPIter(this);
+   }
+   
+   /**
+    * Iterator for TablePlan. Returns the single item which is the table name.
+    */
+   private class PrPIter implements Iterator<Plan>
+   {
+       private boolean done = false;
+       private ProjectPlan plan;
+       private Iterator<Plan> iter;
+       
+       public PrPIter(ProjectPlan plan)
+       { 
+    	   this.plan = plan;
+    	   iter = plan.iterator();
+       }
+       
+       public boolean hasNext()
+       { 
+    	   return !done || iter.hasNext(); 
+       }
+       
+       public Plan next()
+       {
+    	   if (!done)
+    	   {
+    		   done = true;
+    		   return plan;
+    	   } else {
+  			   return iter.next();
+    	   }
+       }
+       
+       public void remove()
+       { throw new UnsupportedOperationException(); }
    }
 }

@@ -123,4 +123,9 @@ public class Schema {
          this.length = length;
       }
    }
+   
+   public boolean equals(Schema s)
+   {
+	   return info.equals(s.info);
+   }
 }

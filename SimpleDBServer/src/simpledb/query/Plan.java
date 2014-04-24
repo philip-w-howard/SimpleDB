@@ -1,11 +1,12 @@
 package simpledb.query;
 
+import java.util.Iterator;
 import simpledb.record.Schema;
 
 /**
  * The interface implemented by each query plan.
  * There is a Plan class for each relational algebra operator.
- * @author Edward Sciore
+ * @author Edward Sciore, Philip Howard
  *
  */
 public interface Plan {
@@ -44,4 +45,24 @@ public interface Plan {
     * @return the query's schema
     */
    public Schema schema();
+   
+   /**
+    * Tests for equality of plans
+    * @return true if the plans are equal
+    */
+   public boolean equals(Plan p);
+   
+   /**
+    * Checks if the plan contains p
+    * @param p the plan being looked for
+    * @return true if the plan contains p
+    */
+   public boolean contains(Plan p);
+
+   /**
+    * Returns an iterator for all the subplans in the plan
+    * @return iterator for the plan
+    */
+   public Iterator<Plan> iterator();    
+  
 }

@@ -1,6 +1,3 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.ResultSet;
@@ -20,24 +17,9 @@ public class ShowRecovery {
 			Driver d = new SimpleDriver();
 			conn = d.connect("jdbc:simpledb://localhost", null);
 
-			Reader rdr = new InputStreamReader(System.in);
-			BufferedReader br = new BufferedReader(rdr);
-
-			doQuery("select RName,RId,Text from RECOVERYDATA");
-			
-//			while (true) {
-//				// process one line of input
-//				System.out.print("\nSQL> ");
-//				String cmd = br.readLine().trim();
-//				System.out.println();
-//				if (cmd.startsWith("exit"))
-//					break;
-//				else if (cmd.startsWith("select"))
-//					doQuery(cmd);
-//				else
-//					doUpdate(cmd);
-//		    }
-	    }
+			doQuery("select SName from STUDENT");
+			doQuery("select SName,DName from STUDENT,DEPT where MajorId=DId");
+				    }
 	    catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -92,17 +74,4 @@ public class ShowRecovery {
 			e.printStackTrace();
 		}
 	}
-
-	private static void doUpdate(String cmd) {
-		try {
-		    Statement stmt = conn.createStatement();
-		    int howmany = stmt.executeUpdate(cmd);
-		    System.out.println(howmany + " records processed");
-		}
-		catch (SQLException e) {
-			System.out.println("SQL Exception: " + e.getMessage());
-			e.printStackTrace();
-		}
-	}
-
 }

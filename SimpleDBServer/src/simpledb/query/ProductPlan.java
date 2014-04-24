@@ -1,10 +1,12 @@
 package simpledb.query;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 import simpledb.record.Schema;
 
 /** The Plan class corresponding to the <i>product</i>
   * relational algebra operator.
-  * @author Edward Sciore
+  * @author Edward Sciore, Philip Howard
   */
 public class ProductPlan implements Plan {
    private Plan p1, p2;
@@ -78,5 +80,62 @@ public class ProductPlan implements Plan {
    public String toString()
    {
 	   return "(Product: " + p1 + "," + p2 + ")";
+   }
+
+   public boolean equals(Plan p)
+   {
+       if (!(p instanceof ProductPlan)) return false;
+       ProductPlan pp = (ProductPlan)p;
+       return p1.equals(pp.p1) && p2.equals(pp.p2);
+   }
+   /**
+    * Checks if the plan contains p
+    * @param p the plan being looked for
+    * @return true if the plan contains p
+    */
+   public boolean contains(Plan p)
+   {
+       return p1.equals(p) || p2.equals(p) || p1.contains(p) || p2.contains(p);
+   }
+   
+   /**
+    * Returns an iterator for the plan. Iterator runs through all sub-plans
+    * @return iterator for the plan
+    */
+   public Iterator<Plan> iterator()
+   {
+       return new PPIter(this);
+   }
+   
+   /**
+    * Iterator for the ProductPlan. Iterates left plan (p1) then right (p2)
+    */
+   private class PPIter implements Iterator<Plan>
+   {
+       private Iterator<Plan> leftIter, rightIter;
+       
+       public PPIter(ProductPlan plan)
+       { 
+           leftIter = plan.p1.iterator();
+           rightIter = plan.p2.iterator();
+       }
+       
+       public boolean hasNext()
+       { 
+           return leftIter.hasNext() || rightIter.hasNext(); 
+       }
+       
+       public Plan next()
+       {
+           if (leftIter.hasNext()) 
+               return leftIter.next();
+           else if (rightIter.hasNext())
+               return rightIter.next();
+           else
+               throw new NoSuchElementException();
+       }
+       
+       public void remove()
+       { throw new UnsupportedOperationException(); }
    }
 }

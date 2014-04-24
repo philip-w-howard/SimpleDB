@@ -143,4 +143,9 @@ public class Predicate {
          result += " and " + iter.next().toString();
       return result;
    }
+
+   public boolean equals(Predicate p)
+   {
+	   return terms.equals(p.terms);
+   }
 }
