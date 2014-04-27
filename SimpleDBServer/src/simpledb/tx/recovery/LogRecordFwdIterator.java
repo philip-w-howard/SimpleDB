@@ -3,7 +3,6 @@ package simpledb.tx.recovery;
 import static simpledb.tx.recovery.LogRecord.*;
 import java.util.Iterator;
 
-import simpledb.file.Block;
 import simpledb.log.BasicLogRecord;
 import simpledb.server.SimpleDB;
 

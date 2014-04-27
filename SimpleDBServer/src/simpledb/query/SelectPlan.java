@@ -36,7 +36,7 @@ public class SelectPlan implements Plan {
     * which is the same as in the underlying query.
     * @see simpledb.query.Plan#blocksAccessed()
     */
-   public int blocksAccessed() {
+   public long blocksAccessed() {
       return p.blocksAccessed();
    }
    
@@ -46,7 +46,7 @@ public class SelectPlan implements Plan {
     * reduction factor of the predicate.
     * @see simpledb.query.Plan#recordsOutput()
     */
-   public int recordsOutput() {
+   public long recordsOutput() {
       return p.recordsOutput() / pred.reductionFactor(p);
    }
    
@@ -60,7 +60,7 @@ public class SelectPlan implements Plan {
     * (but not more than the size of the output table).
     * @see simpledb.query.Plan#distinctValues(java.lang.String)
     */
-   public int distinctValues(String fldname) {
+   public long distinctValues(String fldname) {
       if (pred.equatesWithConstant(fldname) != null)
          return 1;
       else {

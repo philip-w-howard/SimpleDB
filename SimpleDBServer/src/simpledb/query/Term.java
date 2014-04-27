@@ -29,7 +29,7 @@ public class Term {
     * @param p the query's plan
     * @return the integer reduction factor.
     */
-   public int reductionFactor(Plan p) {
+   public long reductionFactor(Plan p) {
       String lhsName, rhsName;
       if (lhs.isFieldName() && rhs.isFieldName()) {
          lhsName = lhs.asFieldName();
@@ -49,7 +49,7 @@ public class Term {
       if (lhs.asConstant().equals(rhs.asConstant()))
          return 1;
       else
-         return Integer.MAX_VALUE;
+         return Long.MAX_VALUE;
    }
    
    /**

@@ -41,7 +41,7 @@ public class ProductPlan implements Plan {
     * <pre> B(product(p1,p2)) = B(p1) + R(p1)*B(p2) </pre>
     * @see simpledb.query.Plan#blocksAccessed()
     */
-   public int blocksAccessed() {
+   public long blocksAccessed() {
       return p1.blocksAccessed() + (p1.recordsOutput() * p2.blocksAccessed());
    }
    
@@ -51,7 +51,7 @@ public class ProductPlan implements Plan {
     * <pre> R(product(p1,p2)) = R(p1)*R(p2) </pre>
     * @see simpledb.query.Plan#recordsOutput()
     */
-   public int recordsOutput() {
+   public long recordsOutput() {
       return p1.recordsOutput() * p2.recordsOutput();
    }
    
@@ -61,7 +61,7 @@ public class ProductPlan implements Plan {
     * the estimate is the same as in the appropriate underlying query.
     * @see simpledb.query.Plan#distinctValues(java.lang.String)
     */
-   public int distinctValues(String fldname) {
+   public long distinctValues(String fldname) {
       if (p1.schema().hasField(fldname))
          return p1.distinctValues(fldname);
       else

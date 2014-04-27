@@ -2,7 +2,6 @@ package simpledb.file;
 
 import simpledb.server.SimpleDB;
 import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.nio.charset.Charset;
 
 /**

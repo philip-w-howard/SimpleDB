@@ -38,7 +38,7 @@ public class ProjectPlan implements Plan {
     * which is the same as in the underlying query.
     * @see simpledb.query.Plan#blocksAccessed()
     */
-   public int blocksAccessed() {
+   public long blocksAccessed() {
       return p.blocksAccessed();
    }
    
@@ -47,7 +47,7 @@ public class ProjectPlan implements Plan {
     * which is the same as in the underlying query.
     * @see simpledb.query.Plan#recordsOutput()
     */
-   public int recordsOutput() {
+   public long recordsOutput() {
       return p.recordsOutput();
    }
    
@@ -57,7 +57,7 @@ public class ProjectPlan implements Plan {
     * which is the same as in the underlying query.
     * @see simpledb.query.Plan#distinctValues(java.lang.String)
     */
-   public int distinctValues(String fldname) {
+   public long distinctValues(String fldname) {
       return p.distinctValues(fldname);
    }
    

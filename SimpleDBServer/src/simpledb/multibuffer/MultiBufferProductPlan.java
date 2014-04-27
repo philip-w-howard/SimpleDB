@@ -60,11 +60,11 @@ public class MultiBufferProductPlan implements Plan {
     * when the query scan is opened.
     * @see simpledb.query.Plan#blocksAccessed()
     */
-   public int blocksAccessed() {
+   public long blocksAccessed() {
       // this guesses at the # of chunks
       int avail = SimpleDB.bufferMgr().available();
-      int size = new MaterializePlan(rhs, tx).blocksAccessed();
-      int numchunks = size / avail;
+      long size = new MaterializePlan(rhs, tx).blocksAccessed();
+      long numchunks = size / avail;
       return rhs.blocksAccessed() +
          (lhs.blocksAccessed() * numchunks);
    }
@@ -75,7 +75,7 @@ public class MultiBufferProductPlan implements Plan {
     * <pre> R(product(p1,p2)) = R(p1)*R(p2) </pre>
     * @see simpledb.query.Plan#recordsOutput()
     */
-   public int recordsOutput() {
+   public long recordsOutput() {
       return lhs.recordsOutput() * rhs.recordsOutput();
    }
    
@@ -85,7 +85,7 @@ public class MultiBufferProductPlan implements Plan {
     * the estimate is the same as in the appropriate underlying query.
     * @see simpledb.query.Plan#distinctValues(java.lang.String)
     */
-   public int distinctValues(String fldname) {
+   public long distinctValues(String fldname) {
       if (lhs.schema().hasField(fldname))
          return lhs.distinctValues(fldname);
       else

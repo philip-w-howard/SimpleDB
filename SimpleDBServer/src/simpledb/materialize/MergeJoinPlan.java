@@ -60,7 +60,7 @@ public class MergeJoinPlan implements Plan {
     * of materializing and sorting the records.
     * @see simpledb.query.Plan#blocksAccessed()
     */
-   public int blocksAccessed() {
+   public long blocksAccessed() {
       return p1.blocksAccessed() + p2.blocksAccessed();
    }
    
@@ -70,8 +70,8 @@ public class MergeJoinPlan implements Plan {
     * <pre> R(join(p1,p2)) = R(p1)*R(p2)/max{V(p1,F1),V(p2,F2)}</pre>
     * @see simpledb.query.Plan#recordsOutput()
     */
-   public int recordsOutput() {
-      int maxvals = Math.max(p1.distinctValues(fldname1),
+   public long recordsOutput() {
+      long maxvals = Math.max(p1.distinctValues(fldname1),
                              p2.distinctValues(fldname2));
       return (p1.recordsOutput() * p2.recordsOutput()) / maxvals;
    }
@@ -82,7 +82,7 @@ public class MergeJoinPlan implements Plan {
     * the estimate is the same as in the appropriate underlying query.
     * @see simpledb.query.Plan#distinctValues(java.lang.String)
     */
-   public int distinctValues(String fldname) {
+   public long distinctValues(String fldname) {
       if (p1.schema().hasField(fldname))
          return p1.distinctValues(fldname);
       else

@@ -55,7 +55,7 @@ public class IndexJoinPlan implements Plan {
     *       + R(indexjoin(p1,p2,idx) </pre>
     * @see simpledb.query.Plan#blocksAccessed()
     */
-   public int blocksAccessed() {
+   public long blocksAccessed() {
       return p1.blocksAccessed() 
          + (p1.recordsOutput() * ii.blocksAccessed())
          + recordsOutput();
@@ -67,7 +67,7 @@ public class IndexJoinPlan implements Plan {
     * <pre> R(indexjoin(p1,p2,idx)) = R(p1)*R(idx) </pre>
     * @see simpledb.query.Plan#recordsOutput()
     */
-   public int recordsOutput() {
+   public long recordsOutput() {
       return p1.recordsOutput() * ii.recordsOutput();
    }
    
@@ -76,7 +76,7 @@ public class IndexJoinPlan implements Plan {
     * specified field.  
     * @see simpledb.query.Plan#distinctValues(java.lang.String)
     */
-   public int distinctValues(String fldname) {
+   public long distinctValues(String fldname) {
       if (p1.schema().hasField(fldname))
          return p1.distinctValues(fldname);
       else

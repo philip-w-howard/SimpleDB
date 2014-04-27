@@ -42,7 +42,7 @@ public class TablePlan implements Plan {
     * which is obtainable from the statistics manager.
     * @see simpledb.query.Plan#blocksAccessed()
     */ 
-   public int blocksAccessed() {
+   public long blocksAccessed() {
       return si.blocksAccessed();
    }
    
@@ -51,7 +51,7 @@ public class TablePlan implements Plan {
     * which is obtainable from the statistics manager.
     * @see simpledb.query.Plan#recordsOutput()
     */
-   public int recordsOutput() {
+   public long recordsOutput() {
       return si.recordsOutput();
    }
    
@@ -60,7 +60,7 @@ public class TablePlan implements Plan {
     * which is obtainable from the statistics manager.
     * @see simpledb.query.Plan#distinctValues(java.lang.String)
     */
-   public int distinctValues(String fldname) {
+   public long distinctValues(String fldname) {
       return si.distinctValues(fldname);
    }
    

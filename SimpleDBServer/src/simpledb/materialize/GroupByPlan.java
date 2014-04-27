@@ -58,7 +58,7 @@ public class GroupByPlan implements Plan {
     * of materializing and sorting the records.
     * @see simpledb.query.Plan#blocksAccessed()
     */
-   public int blocksAccessed() {
+   public long blocksAccessed() {
       return p.blocksAccessed();
    }
    
@@ -68,7 +68,7 @@ public class GroupByPlan implements Plan {
     * for each grouping field.
     * @see simpledb.query.Plan#recordsOutput()
     */
-   public int recordsOutput() {
+   public long recordsOutput() {
       int numgroups = 1;
       for (String fldname : groupfields)
          numgroups *= p.distinctValues(fldname);
@@ -84,7 +84,7 @@ public class GroupByPlan implements Plan {
     * assume that all values are distinct.
     * @see simpledb.query.Plan#distinctValues(java.lang.String)
     */
-   public int distinctValues(String fldname) {
+   public long distinctValues(String fldname) {
       if (p.schema().hasField(fldname))
          return p.distinctValues(fldname);
       else

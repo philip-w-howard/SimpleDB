@@ -23,14 +23,14 @@ public interface Plan {
     * that will occur when the scan is read to completion.
     * @return the estimated number of block accesses
     */
-   public int    blocksAccessed();
+   public long    blocksAccessed();
    
    /**
     * Returns an estimate of the number of records
     * in the query's output table.
     * @return the estimated number of output records
     */
-   public int    recordsOutput();
+   public long    recordsOutput();
    
    /**
     * Returns an estimate of the number of distinct values
@@ -38,7 +38,7 @@ public interface Plan {
     * @param fldname the name of a field
     * @return the estimated number of distinct field values in the output
     */
-   public int    distinctValues(String fldname);
+   public long    distinctValues(String fldname);
    
    /**
     * Returns the schema of the query.

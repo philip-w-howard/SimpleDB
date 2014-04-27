@@ -54,7 +54,7 @@ public class MaterializePlan implements Plan {
     * of materializing the records.
     * @see simpledb.query.Plan#blocksAccessed()
     */
-   public int blocksAccessed() {
+   public long blocksAccessed() {
       // create a dummy TableInfo object to calculate record length
       TableInfo ti = new TableInfo("", srcplan.schema());
       double rpb = (double) (BLOCK_SIZE / ti.recordLength());
@@ -66,7 +66,7 @@ public class MaterializePlan implements Plan {
     * which is the same as in the underlying plan.
     * @see simpledb.query.Plan#recordsOutput()
     */
-   public int recordsOutput() {
+   public long recordsOutput() {
       return srcplan.recordsOutput();
    }
    
@@ -75,7 +75,7 @@ public class MaterializePlan implements Plan {
     * which is the same as in the underlying plan.
     * @see simpledb.query.Plan#distinctValues(java.lang.String)
     */
-   public int distinctValues(String fldname) {
+   public long distinctValues(String fldname) {
       return srcplan.distinctValues(fldname);
    }
    

@@ -48,7 +48,7 @@ public class IndexSelectPlan implements Plan {
     * index traversal cost plus the number of matching data records.
     * @see simpledb.query.Plan#blocksAccessed()
     */
-   public int blocksAccessed() {
+   public long blocksAccessed() {
       return ii.blocksAccessed() + recordsOutput();
    }
    
@@ -58,7 +58,7 @@ public class IndexSelectPlan implements Plan {
     * for the index.
     * @see simpledb.query.Plan#recordsOutput()
     */
-   public int recordsOutput() {
+   public long recordsOutput() {
       return ii.recordsOutput();
    }
    
@@ -66,7 +66,7 @@ public class IndexSelectPlan implements Plan {
     * Returns the distinct values as defined by the index.
     * @see simpledb.query.Plan#distinctValues(java.lang.String)
     */
-   public int distinctValues(String fldname) {
+   public long distinctValues(String fldname) {
       return ii.distinctValues(fldname);
    }
    
