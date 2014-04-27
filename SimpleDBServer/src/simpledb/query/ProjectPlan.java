@@ -83,28 +83,7 @@ public class ProjectPlan implements Plan {
 	   return returnVal;
    }
 
-   /**
-    * compares two plans
-    * @return true if the plans are the same
-    */
-   public boolean equals(Plan p)
-   {
-       if (!(p instanceof ProjectPlan)) return false;
-       ProjectPlan pp = (ProjectPlan)p;
-       return this.p.equals(pp.p) && this.schema.equals(pp.schema);
-   }
-
-   /**
-    * Checks if the plan contains p
-    * @param p the plan being looked for
-    * @return true if the plan contains p
-    */
-   public boolean contains(Plan p)
-   {
-       return p.equals(this);
-   }
-   
-   /**
+    /**
     * Returns an iterator for the plan. Iterator runs through all sub-plans
     * @return iterator for the plan
     */

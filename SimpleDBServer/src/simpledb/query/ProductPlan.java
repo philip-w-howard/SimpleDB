@@ -82,22 +82,6 @@ public class ProductPlan implements Plan {
 	   return "(Product: " + p1 + "," + p2 + ")";
    }
 
-   public boolean equals(Plan p)
-   {
-       if (!(p instanceof ProductPlan)) return false;
-       ProductPlan pp = (ProductPlan)p;
-       return p1.equals(pp.p1) && p2.equals(pp.p2);
-   }
-   /**
-    * Checks if the plan contains p
-    * @param p the plan being looked for
-    * @return true if the plan contains p
-    */
-   public boolean contains(Plan p)
-   {
-       return p1.equals(p) || p2.equals(p) || p1.contains(p) || p2.contains(p);
-   }
-   
    /**
     * Returns an iterator for the plan. Iterator runs through all sub-plans
     * @return iterator for the plan

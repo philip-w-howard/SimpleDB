@@ -87,26 +87,6 @@ public class SelectPlan implements Plan {
    {
 	   return "(Select: " + p + "{" + pred + "})";
    }
-   /**
-    * compares two plans
-    * @return true if the plans are the same
-    */
-   public boolean equals(Plan p)
-   {
-       if (!(p instanceof SelectPlan)) return false;
-       SelectPlan sp = (SelectPlan)p;
-       return this.p.equals(sp.p) && this.pred.equals(sp.pred);
-   }
-
-   /**
-    * Checks if the plan contains p
-    * @param p the plan being looked for
-    * @return true if the plan contains p
-    */
-   public boolean contains(Plan p)
-   {
-       return p.equals(this);
-   }
    
    /**
     * Returns an iterator for the plan. Iterator runs through all sub-plans
@@ -129,7 +109,7 @@ public class SelectPlan implements Plan {
        public SPIter(SelectPlan plan)
        { 
     	   this.plan = plan;
-    	   iter = plan.iterator();
+    	   iter = p.iterator();
        }
        
        public boolean hasNext()

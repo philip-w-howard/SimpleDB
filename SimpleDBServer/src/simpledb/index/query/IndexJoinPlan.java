@@ -90,20 +90,6 @@ public class IndexJoinPlan implements Plan {
    public Schema schema() {
       return sch;
    }
-   /**
-    * Tests for equality of plans
-    * @return true if the plans are equal
-    */
-   public boolean equals(Plan p)
-   { throw new UnsupportedOperationException(); }
-   
-   /**
-    * Checks if the plan contains p
-    * @param p the plan being looked for
-    * @return true if the plan contains p
-    */
-   public boolean contains(Plan p)
-   { throw new UnsupportedOperationException(); }
 
    /**
     * Returns an iterator for all the subplans in the plan
