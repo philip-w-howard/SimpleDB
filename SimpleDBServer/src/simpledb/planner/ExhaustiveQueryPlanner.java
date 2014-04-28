@@ -31,30 +31,19 @@ public class ExhaustiveQueryPlanner implements QueryPlanner {
         
         while (myIter.hasNext())
         {
-            mine.add(myIter.next());
+            Plan p = myIter.next();
+            if (p instanceof TablePlan)	mine.add(p);
         }
         
         while (theirIter.hasNext())
         {
-            theirs.add(theirIter.next());
+            Plan p = theirIter.next();
+            if (p instanceof TablePlan)	theirs.add(p);
         }
         
         if (mine.size() != theirs.size()) return false;
-        for (Plan myPlan : mine)
-        {
-            boolean found = false;
-            for (int ii=0; ii<theirs.size(); ii++)
-            {
-                if (myPlan.equals(theirs.get(ii)))
-                {
-                    theirs.remove(ii);
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) return false;
-        }
-        return true;
+        if (mine.containsAll(theirs)) return true;
+        return false;
     }
     /**
      * Checks if the plan contains tables from p
@@ -73,7 +62,6 @@ public class ExhaustiveQueryPlanner implements QueryPlanner {
         		if (contains(p2, (TablePlan)p)) return true;
         	}
         }
-        System.out.println("ContainsAny: false\n"+p1+"\n"+p2);
         return false;
     }
     
@@ -186,6 +174,7 @@ public class ExhaustiveQueryPlanner implements QueryPlanner {
         
         //Step 4: Project on the field names
         p = new ProjectPlan(p, data.fields());
+
         return p;
     }
 
