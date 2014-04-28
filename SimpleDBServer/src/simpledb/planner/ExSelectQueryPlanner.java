@@ -9,12 +9,12 @@ import simpledb.server.SimpleDB;
 import simpledb.tx.Transaction;
 
 /**
- * Program to exhausively search for a "best" plan
+ * Program to exhaustively search for a "best" plan
  * 
  * @author Philip Howard 
- * @version 2014-04-17
+ * @version 2014-04-25
  */
-public class ExhaustiveQueryPlanner implements QueryPlanner {
+public class ExSelectQueryPlanner implements QueryPlanner {
     /**
      * Checks if the plan contains tables from p
      * @param p1 the plan being compared against
@@ -31,30 +31,19 @@ public class ExhaustiveQueryPlanner implements QueryPlanner {
         
         while (myIter.hasNext())
         {
-            mine.add(myIter.next());
+            Plan p = myIter.next();
+            if (p instanceof TablePlan)	mine.add(p);
         }
         
         while (theirIter.hasNext())
         {
-            theirs.add(theirIter.next());
+            Plan p = theirIter.next();
+            if (p instanceof TablePlan)	theirs.add(p);
         }
         
         if (mine.size() != theirs.size()) return false;
-        for (Plan myPlan : mine)
-        {
-            boolean found = false;
-            for (int ii=0; ii<theirs.size(); ii++)
-            {
-                if (myPlan.equals(theirs.get(ii)))
-                {
-                    theirs.remove(ii);
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) return false;
-        }
-        return true;
+        if (mine.containsAll(theirs)) return true;
+        return false;
     }
     /**
      * Checks if the plan contains tables from p
@@ -73,7 +62,6 @@ public class ExhaustiveQueryPlanner implements QueryPlanner {
         		if (contains(p2, (TablePlan)p)) return true;
         	}
         }
-        System.out.println("ContainsAny: false\n"+p1+"\n"+p2);
         return false;
     }
     
@@ -98,7 +86,7 @@ public class ExhaustiveQueryPlanner implements QueryPlanner {
         
         return false;
     }
-
+   
     private void trimDups(ArrayList<Plan> list)
     {
         for (int ii=0; ii<list.size(); ii++)
@@ -140,8 +128,16 @@ public class ExhaustiveQueryPlanner implements QueryPlanner {
            else
            {
         	   TablePlan t = new TablePlan(tblname, tx);
-        	   System.out.printf("TablePlan: %s %d %d\n", tblname, t.blocksAccessed(), t.recordsOutput());
-               plans.add(t);
+        	   //System.out.printf("TablePlan: %s %d %d\n", tblname, t.blocksAccessed(), t.recordsOutput());
+        	   Predicate pred = data.pred().selectPred(t.schema());
+        	   if (pred != null)
+        	   {
+        		   SelectPlan s = new SelectPlan(t,pred);
+            	   //System.out.printf("SelectPlan: %s %d %d\n", s, s.blocksAccessed(), s.recordsOutput());
+        		   plans.add(s);
+        	   } else {
+        		   plans.add(t);
+        	   }
               
            }
         }
@@ -156,7 +152,6 @@ public class ExhaustiveQueryPlanner implements QueryPlanner {
         
         for (int size=2; size<=plans.size(); size++)
         {
-//            System.out.println("Generating length " + size + " lists");
             newList = new ArrayList<Plan>();
             for (int ii=1; ii<size; ii++)
             {
@@ -167,8 +162,15 @@ public class ExhaustiveQueryPlanner implements QueryPlanner {
                     {
                         if (!containsAny(list, plan)) 
                         {
-                            Plan p = new ProductPlan(list, plan);
-                            newList.add(p);
+                        	Plan p = new ProductPlan(list, plan);
+                        	Predicate pred = data.pred().joinPred(list.schema(), plan.schema());
+                        	if (pred != null)
+                        	{
+                        		SelectPlan s = new SelectPlan(p,pred);
+                        		newList.add(s);
+                        	} else {
+                        		newList.add(p);
+                        	}
                         }
                     }
                 }
@@ -186,6 +188,8 @@ public class ExhaustiveQueryPlanner implements QueryPlanner {
         
         //Step 4: Project on the field names
         p = new ProjectPlan(p, data.fields());
+//        System.out.printf("Returning: %d %d %s\n", p.blocksAccessed(),p.recordsOutput(), p);
+
         return p;
     }
 

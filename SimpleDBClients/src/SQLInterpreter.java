@@ -60,19 +60,20 @@ public class SQLInterpreter {
 			    System.out.print("-");
 		    System.out.println();
 
+		    System.out.println("Not printing records");
 		    // print records
-		    while(rs.next()) {
-				for (int i=1; i<=numcols; i++) {
-					String fldname = md.getColumnName(i);
-					int fldtype = md.getColumnType(i);
-					String fmt = "%" + md.getColumnDisplaySize(i);
-					if (fldtype == Types.INTEGER)
-						System.out.format(fmt + "d", rs.getInt(fldname));
-					else
-						System.out.format(fmt + "s", rs.getString(fldname));
-				}
-				System.out.println();
-			}
+//		    while(rs.next()) {
+//				for (int i=1; i<=numcols; i++) {
+//					String fldname = md.getColumnName(i);
+//					int fldtype = md.getColumnType(i);
+//					String fmt = "%" + md.getColumnDisplaySize(i);
+//					if (fldtype == Types.INTEGER)
+//						System.out.format(fmt + "d", rs.getInt(fldname));
+//					else
+//						System.out.format(fmt + "s", rs.getString(fldname));
+//				}
+//				System.out.println();
+//			}
 			rs.close();
 		}
 		catch (SQLException e) {
